@@ -70,6 +70,21 @@
     </div>
 
     <script src="./firstform2.js"></script>
+    <script>
+        const email= document.getElementById('email');
+        email.addEventListener('input',() =>validated(email));
+        
+        const submit=document.getElementById('submit');
+        submit.addEventListener('click',() => validated(email));
+        function validated(element){
+            if(element.validity.typeMismatch){
+                element.setCustomValidity("The email is not in the right format");
+                element.reportValidity();
+            }else{
+                element.setCustomValidity("");
+            }
+        }
+    </script>
 </body>
 
 </html>
