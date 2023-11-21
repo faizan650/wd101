@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        input#name:invalid:focus{
+            border: 3px solid red;
+        };
+        input#email:invalid:focus{
+            border: 3px solid red;
+        };
+        input#dob:invalid:focus {
+            border: 3px solid red;
+        };
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-black-60">
+    <div class="container bg-gray-50 shadow-xl rounded-sm w-fit sm:w-98 py-6 mb-6">
+        <form id="user-form" class="w-fit px-5 sm:px-7">
+            <h1 class="text-2xl font-bold text-center mb-4">Registration Form</h1>
+
+            <div class="flex flex-col space-y-5">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required class="  p-2 rounded-md">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required class=" p-2 rounded-md">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required class=" p-2 rounded-md">
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required class=" p-2 rounded-md">
+
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" id="t&c" name="t&c">
+                    <label for="t&c">Accept Terms & Conditions</label>
+                </div>
+
+                <button type="submit" class="w-fit bg-purple-600 text-white border-none rounded-md p-3 mt-5">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="entries bg-white shadow-lg rounded-lg w-fit sm:w-160 p-7">
+        <div class="mx-auto">
+            <h2 class="flex font-bold text-3xl justify-center align-middle">Entries</h2>
+            <div id="user-entries">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Dob</th>
+                            <th>Accepted terms?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./firstform2.js"></script>
+</body>
+
+</html>
